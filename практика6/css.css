@@ -1,0 +1,79 @@
+body{
+	background: url(pr_6/BG-ILLU2.jpg);
+	background-size:100%;
+	font-size: 16px;
+	margin-top: 60px;
+	font-family: Arial;
+	color:#808080; 	
+}
+
+div.back{
+	color: #666666;
+	width: 290px;
+	height: 350px;
+}
+div.back, div.main{
+	width: 800px;
+	left: 450px;
+	position: absolute;
+	display: inline-block;
+}
+ul{	
+	display: inline-block;
+	float: left;
+	width: 200px;
+	height: 290px;
+	border-radius: 7px;
+	list-style-type: none;
+	background: rgba(255, 255, 200, 0.7);
+/*значения красной, зеленой и синей составляющей в десятичном исчислении + прозрачность*/
+	padding: 0px;
+	margin: 10px;
+	text-align: center;
+}
+li{
+	padding: 8px 10px 0 10px;
+}
+div.main{
+	display: inline-block;
+	z-index:100;
+}
+.icon{
+	display: inline-block;
+	width: 200px;
+	height: 280px;
+	margin: 10px;
+	font-size: 18px;
+	vertical-align: bottom;
+	margin-right: 6px;
+	text-align: center;
+	padding-top: 10px;
+	border-radius: 7px;
+	background-color: white;
+	transition: all 0.9s ease; 
+/*для всех, время перехода и начинается медленно, разгоняется и замедляется к концу*/
+}
+.block1:hover{
+	transform: rotateX(-180deg);/*вращение вокруг оси X*/
+	opacity: 0;
+}
+.block2:hover{
+	transform: rotateZ(180deg);/*вращение вокруг оси Z*/
+	opacity: 0;
+}
+.block3:hover{
+	transform: skew(12deg,15deg);/*растяжение(наклон)*/
+	opacity: 0;	
+}
+.block4:hover{
+	transform: translate(-50px,80px);/*перемещение в левый нижний угол*/
+	opacity: 0;
+}
+.block5:hover{
+	transform: scale(1.5);/*увеличение*/
+	opacity: 0;
+}
+.block6:hover{
+	border-radius: 100%;/*закругление внутрь*/
+	opacity: 0;
+}
