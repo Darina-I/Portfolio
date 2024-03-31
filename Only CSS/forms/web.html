@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Web</title>
+		<link rel="stylesheet" href="web.css">
+	</head>
+	<body>
+		<div class="head">
+			<div class="logo"></div>
+			<h1>Zoo Keeper Application</h1>	
+		</div>
+		<nav>
+			<ul>
+				<li class="blue">Products</li>
+				<li>Products</li>
+				<li>Services</li>
+				<li>Feedback</li>
+			</ul>
+			<ul>
+				<li class="blue">Reports</li>
+				<li>Assigned Issues</li>
+				<li>Summary View</li>
+			</ul>
+			<ul>
+				<li class="blue">Info</li>
+				<li>Home</li>
+				<li>Articles</li>
+				<li>About us</li>
+			</ul>	
+		</nav>
+		<main>
+			<form action=" ">
+				<p>Please complete the form.</p>
+				<fieldset>
+					<legend>Contact Details</legend>
+					<label>Name<input type="text" name="Name" placeholder="Иван Tопорышкин"required></label>
+					<label>Telephone<input type="text" name="Telephone" placeholder="89955566893" required pattern="[0-9]{11}"></label>
+					<label>Email<input type="text" name="Email" placeholder="smbody@mail.ru" required></label>					
+					<label>Web site<input type="text" name="Web site" placeholder="www.site.ru" required></label>
+				</fieldset>	
+				<fieldset>
+					<legend>Person Details</legend>
+					<label>Birthday<input type="date" name="Date" value="2000-11-11" required></label>
+					<label class="gender">Gender<select name="gender" required> 
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select></label>
+					<label>Registration date<input type="date" name="reg Date" value="2016-06-02" required></label>
+					<label class="textarea">When did you first know you wanted to be a zoo-keeper?<textarea rows="6" cols="30"></textarea></label>
+					<label class="pets">Pick Your Favourite Animals<br>
+						<input type="checkbox" name="pet1" value="dog">Dog
+						<input type="checkbox" name="pet2" value="cat">Cat
+						<input type="checkbox" name="pet3" value="turtle">Turtle
+						<input type="checkbox" name="pet4" value="fish">Fish
+						<input type="checkbox" name="pet5" value="parrot">Parrot
+						<input type="checkbox" name="pet1" value="canary">Canary
+					</label>
+					<label class="color">Color of Pet<input type="color" name="color" required></label>
+				</fieldset>
+				<div class="button">
+					<input type="submit" value="Submit">
+					<input type="reset" value="Reset">
+				</div>
+			</form>
+		</main>
+	</body>
+</html>
