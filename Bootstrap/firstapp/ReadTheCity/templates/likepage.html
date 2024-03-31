@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block head %}{{title}}{% endblock head%}
+{% block content%}
+    {% for b in books %}
+        <div class="card mt-5 mb-5 z-index-n2">
+            <div class="card-header">Авторы:
+                {{ b.authors.all|join:", "}}
+                <a href="{% url 'drop_like' %}?book_id={{b.id}}" class="btn btn-primary like">Удалить</a>
+            </div>
+
+            {% if b.photo.url != ''%}
+                <img src="{{b.photo.url}}" width="100px" class="photobook">
+            {% endif %}
+            <div class="card-body">
+                <h4 class="card-title" >{{b.name}}</h4>
+                <h6 class="card-subtitle mb-2 text-body-secondary mt-1"> - {{b.genre}}</h6>
+                <p class="card-text">Доступна на языках:
+                    {{ b.lang.all|join:", "}}
+                </p>
+                <a href="{{ b.get_absolute_url }}" class="btn btn-primary">Просмотр или скачать</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock%}

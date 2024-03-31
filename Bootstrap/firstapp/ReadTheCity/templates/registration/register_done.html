@@ -1,0 +1,7 @@
+{% extends "main.html" %}
+{% block head %}Вход{% endblock head%}
+{% block content%}
+    <p>Добро пожаловать!</p>
+    <p>Вы успешно прошли регистрацию! Для входа необходимо авторизоваться</p>
+    <a type="button" class="btn btn-light" href="{% url 'login' %}">Войти</a>
+{% endblock %}

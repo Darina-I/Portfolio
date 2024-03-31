@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block head %}{{title}}{% endblock head%}
+{% block content%}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Поиск автора" name="author" >
+            <button class="btn btn-outline-secondary" type="submit">Поиск</button>
+        </div>
+    </form>
+    {% for a in authors%}
+        <div class="card mb-2">
+            <div class="card-header"></div>
+            <div class="card-body">
+                <h4 class="card-title" >{{a.fio}}</h4>
+                <p class="card-text">Дата рождения: {{a.birth}}</p>
+                <p class="card-text">Дата смерти: {{a.death}}</p>
+                <a href="{{ a.get_absolute_url }}" class="btn btn-primary">Просмотр</a>
+            </div>
+        </div>
+    {% empty %}
+         <h6 class="card-subtitle mb-2 text-body-secondary mt-1">Автор не найдены</h6>
+    {% endfor %}
+{% endblock content%}

@@ -1,0 +1,43 @@
+{% extends "main.html" %}
+{% block head %}
+    {{thisbook.name}}
+    <p class="isbn">(ISBN: {{thisbook.isbn}})</p>
+{% endblock head%}
+{% block content %}
+    <a href="{% url 'add_like' %}?book_id={{thisbook.id}}&page=one" class="btn btn-primary like">Like</a>
+    {% if thisbook.photo.url != ''%}
+        <img src="{{thisbook.photo.url}}" width="200px" class="mt-5 mb-3">
+    {% endif %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">
+                {% for a in thisbook.authors.all%}
+                    <p>{{a.fio}} </p>
+                {% endfor %}
+            </h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">Жанр: {{thisbook.genre}}</h6>
+            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">Издательство: {{thisbook.print}}</h6>
+            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">Год выпуска: {{thisbook.year}}</h6>
+            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">Количество скачиваний: {{thisbook.upload}}</h6>
+            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">Количество в избранном: {{count_like}}</h6>
+            <p class="card-text">{{thisbook.content}}</p>
+            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">Доступна на языках</h6>
+            <div class="accordion" id="accordionExample">
+                {% for l in thisbook.lang.all%}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{l}}" aria-expanded="false">
+                            {{l.name}}
+                          </button>
+                        </h2>
+                        <div id="{{l}}" class="accordion-collapse collapse">
+                          <div class="accordion-body">
+                            <a href="{% url 'counter'%}?book_id={{thisbook.id}}" class="card-link">Скачать</a>
+                          </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

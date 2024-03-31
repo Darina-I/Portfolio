@@ -1,0 +1,63 @@
+{% extends "main.html" %}
+{% block head %}{{title}}{% endblock head%}
+{% block content%}
+    {% if profile.photo.url != ''%}
+        <div class="mb-3">
+            <img src="{{profile.photo.url}}" width="190px">
+        </div>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{user_form.as_p}}
+        {% if profile.birth %}
+            <p>Текущая дата рождения: {{profile.birth}}</p>
+        {% endif %}
+        {{profile_form.as_p}}
+        <button class="btn btn-primary">Сохранить изменения</button>
+    </form>
+    {% if user_form.errors %}
+        {% for key, value in user_form.errors.items %}
+            {{ value }}
+        {% endfor %}
+    {% endif %}
+    {% csrf_token %}
+    <hr>
+    <p><a href="{% url 'password_change' %}">Сменить пароль</a></p>
+
+{% comment %}
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <img src="{{profile.photo.url}}" width="190px">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Имя</label>
+                <input type="text" class="form-control" value="{{profile.user.firstname}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Фамилия</label>
+                <input type="text" class="form-control" value="{{profile.user.lastname}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Логин</label>
+                <input type="text" class="form-control" value="{{profile.user.username}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Город</label>
+                <input type="date" class="form-control" value="{{profile.birth | date:'Y-m-d'}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Город</label>
+                <input type="text" class="form-control" value="{{profile.city}}">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">О себе</label>
+                <textarea class="form-control" rows="3">{{profile.content}}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+        </form>
+    </div>
+{% endcomment %}
+
+{% endblock content%}
