@@ -1,0 +1,33 @@
+.flag{
+	position: relative;
+	right: 55px;
+	text-align: right;
+}
+div.vce{/*весь домик*/
+	width: 453px;
+	margin: auto;
+	font-size: 0px;
+	vertical-align: top;
+}
+div.kr{/*крыша*/
+	position: relative;/*относительно позиции по умолчанию*/
+	left: 37px;
+}
+footer{
+	text-align: center;	
+	font-family: Arial;
+}
+a{
+	color: #c12736;
+}
+a:visited{color:#997f80}
+p{
+	color: #a3a0a3;
+}
+li{
+	display: inline-block;
+	white-space: pre;
+}
+
+
+	
