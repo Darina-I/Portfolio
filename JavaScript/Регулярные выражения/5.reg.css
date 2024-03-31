@@ -1,0 +1,8 @@
+body{font-family:Arial;width: 400px;}
+fieldset{
+	width: 300px;
+	border-radius: 7px;
+}
+input{float:right;}
+fieldset input{float:left;}
+select{margin:10px;}

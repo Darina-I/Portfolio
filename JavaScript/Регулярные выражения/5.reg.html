@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>регулярки</title>
+		<script src="5.reg.js"></script>
+		<link rel="stylesheet" href="5.reg.css">
+	</head>
+	<body>
+	<form name="info">
+		<p>ФИО<input id="fio" type="text" onchange="reg()"></p>
+		<fieldset>
+			<legend>Город:</legend>
+			<input type="radio" name="city" checked>Тюмень
+			<br><input type="radio" name="city">Камышлов
+			<br><input type="radio" name="city">Ишим
+			<br><input type="radio" name="city">Сургут
+			<br><input type="radio" name="city">Петропавловск
+		</fieldset>
+		<p>Адрес<input type="text" id="adr" onchange="reg()" placeholder="ул.*** д.** кв.***"></p>
+		<p>Телефон<input type="text" id="tel" onchange="reg()" placeholder="8 555-555-5555 или +7 55-55-55-55-55"></p>
+		<p>Адрес электронной почты<input type="text" id="email" onchange="reg()"></p>
+		<p>СНИЛС<input type="text" id="snils" onchange="reg()" placeholder="XXX-XXX-XXX YY"></p>
+		<p>Наименование товара<select id="tovar" name="tovars"></p>
+			<option>Книги</option>
+			<option>Мебель</option>
+			<option>Косметика</option>
+			<option>Техника</option>
+			<option>Канцелярия</option>
+		</select>
+		<input type="submit" id="but" disabled>
+		<input type="reset">
+	</form></body>
+</html>

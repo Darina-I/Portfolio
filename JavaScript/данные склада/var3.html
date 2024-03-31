@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Кнопочки</title>
+		<script src="var3.js"></script>
+		<link rel="stylesheet" href="var3.css">
+	<body>
+	<form name="info">
+		<div class="dan">
+			<fieldset>
+				<legend class="check">Наименование</legend>
+				<input type="text" id="name" onchange="prov()">
+			</fieldset>
+			<fieldset class="check">
+				<legend>Количество на складе(К)</legend>
+				<input type="text" id="kol" onchange="prov()">
+			</fieldset>	
+			<fieldset class="check">
+				<legend>Цена за ед.(Ц)</legend>
+				<input type="text" id="cost" onchange="prov()"> р.
+			</fieldset>	
+			<fieldset class="check">
+				<legend>Расходы за месяц(РМ)</legend>
+				<input type="text" id="all1" onchange="prov()">
+			</fieldset>	
+			<fieldset class="check">
+				<legend>Остаток на складе(ОС)</legend>
+				<input type="text" id="ost" disabled>
+			</fieldset>	
+			<fieldset class="check">
+				<legend>Сумма расхода за месяц(СР)</legend>
+				<input type="text" id="summa1"disabled>
+			</fieldset>
+			<fieldset class="check">
+				<legend>Сумма остатка(СО)</legend>
+				<input type="text" id="summa2" disabled>
+			</fieldset>
+		</div>
+		<div class="push">
+			<input id="but" type="button" onClick="result()" value="Вычислить" disabled>
+			<input type="reset" onClick="res()" value="Очистить">
+			<input type="button" onClick="close1()" value="Выход">
+		</div>
+	</form>
+	</body>
+	</head>
+</html>

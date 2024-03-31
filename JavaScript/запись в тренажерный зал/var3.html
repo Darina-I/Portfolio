@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Тренажерный зал</title>
+		<script src="var3.js"></script>
+		<link rel="stylesheet" href="var3.css">
+	<body>
+	<h1>Тренажерный зал</h1>
+	<form name="info">
+		<fieldset>
+			<legend>Тренажеры</legend>
+			<input type="radio" name="sport" value="400">Беговая дорожка
+			<br><input type="radio" name="sport" value="150">Штанга
+			<br><input type="radio" name="sport" value="500">Жим от груди
+			<br><input type="radio" name="sport" value="300">Баттерфляй
+		</fieldset>
+		<fieldset>
+			<legend>Время дня</legend>
+			<input type="radio" name="day">Утро
+			<br><input type="radio" name="day" value="День">День
+			<br><input type="radio" name="day" value="Вечер">Вечер
+			<br><input type="radio" name="day" value="Выходные дни">Выходные дни
+		</fieldset>
+		<p>Количество часов</p><input id="text" type="text" onkeypress="prov()" required>
+		<textarea id="result" rows="6" cols="25" disabled></textarea>
+		<br><input type="button" value="Вычислить" onClick="count()">
+		<input type="reset" value="Очистить">
+	</form>
+	
+	</head>
+</html>

@@ -1,0 +1,8 @@
+fieldset{
+	width: 300px;
+	border-radius: 10px;
+	border-color: #9966cc;
+}
+#text{width: 60px; margin: 10px;}
+p{display: inline-block;}
+textarea{margin:5px; resize: none;display: block;}

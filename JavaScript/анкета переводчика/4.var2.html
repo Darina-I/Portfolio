@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Анкета переводчика</title>
+		<script src="4.var2.js"></script>
+		<link rel="stylesheet" href="4.var2.css">
+	<body>
+	<div>
+		<h1>Анкета переводчика</h1>
+		<form>
+			<p>Язык<select id="langs" name="lang" multiple>
+				<option value="Английский">Английский</option>
+				<option value="Французский">Французский</option>
+				<option value="Немецкий">Немецкий</option>
+				<option value="Китайский">Китайский</option>
+				<option value="Итальянский">Итальянский</option>
+				<option value="Испанский">Испанский</option>
+			</select></p>
+			<p>Стоимость<input id="cena" type="text" name="cost" value="400" disabled></p>
+			<p>Статус<select id="st" name="stat" onchange="can()">
+				<option value="400">Студент</option>
+				<option value="400">Аспирант</option>
+				<option value="500">Школьный преподаватель</option>
+				<option value="500">Преподаватель вуза</option>
+				<option value="600">Частный преподаватель</option>
+				<option value="800">Носитель языка</option>
+			</select></p>
+			<p>Количество часов<input id="kol" type="text" name="hour" onkeypress="prov1()" onchange="prov2()"></p>
+			<p class="win"><span class="winn">Вознаграждение</span><textarea id="result" rows="4" cols="35" disabled></textarea></p>
+			<input class="but" type="button" value="Peзультат" onClick="vcee()" disabled >
+			<input class="but" type="reset" value="Очистить">
+		</div>
+	</body>
+</html>
+		
+
+		
+		

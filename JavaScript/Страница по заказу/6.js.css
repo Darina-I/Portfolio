@@ -1,0 +1,17 @@
+body{
+	width: 500px;
+	margin: auto;
+	font-size: 18px;
+	font-family: Arial;
+}
+.fon{background:#e38eff;padding:0 30px 30px 30px;border-radius: 8px;}
+h2{text-align:center;}
+.text{display: inline-block;margin-left: 20px;}
+.draw{display: inline-block;}
+fieldset{
+	border-color:white;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+input{margin-left: 10px;}
+select{margin-left:10px;}

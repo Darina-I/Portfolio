@@ -1,0 +1,13 @@
+body{width: 500px; margin: auto;}
+h1{text-align:center}
+fieldset{
+	width: 200px;
+	display: inline-block;
+	border-radius: 7px;
+}
+form{
+	display: inline-grid;
+	grid-template-columns: 300px 200px;
+}	
+.data input{margin:10px 10px 10px 0;}
+#res{margin:10px;}

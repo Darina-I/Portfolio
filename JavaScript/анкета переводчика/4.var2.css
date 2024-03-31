@@ -1,0 +1,22 @@
+div{
+	width: 600px;
+	padding:0 50px;
+	margin: auto;
+	background: #ffe4b5;
+}
+form{
+	display: inline-grid;
+	grid-template-columns: 300px 350px;
+	grid-template-rows: 150px 50px 100px;
+}
+.win{
+	grid-column-start:1;
+	grid-column-end:3;
+	vertical-align:top;
+}
+.winn{vertical-align: top;}
+input, select{margin: 15px;}
+p{margin: 0;}
+h1{text-align: center;}
+textarea{margin:0 20px; resize: none; background:white;}
+.but{width:150px}

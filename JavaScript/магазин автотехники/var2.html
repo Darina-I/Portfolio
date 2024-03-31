@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Комплектация автомобиля</title>
+		<script src="var2.js"></script>
+		<link rel="stylesheet" href="var2.css">
+	<body>
+	<h2>Комплектация автомобиля</h2>
+	<form name="info">
+		<input class="num" type="checkbox" name="nam1" value="451000" onchange="count1()">Базовая комплектация
+		<br><input class="num" type="checkbox" name="nam2" value="1200" onchange="count1()">Коврики
+		<br><input class="num" type="checkbox" name="nam3" value="4500" onchange="count1()">Защита картера
+		<br><input class="num" type="checkbox" name="nam4" value="12000" onchange="count1()">Зимние шины
+		<br><input class="num" type="checkbox" name="nam5" value="16000" onchange="count1()">Литые диски
+		<div><p>Цена</p><textarea id="result" rows="4" cols="25" disabled></textarea></div>
+		<img id="photo" src="car1.jpg" alt="Машинка">
+		<input type="button" value="Рассчитать" onClick="but()">
+	</form></body>
+</html>

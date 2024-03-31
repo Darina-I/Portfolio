@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Работа с датами</title>
+		<script src="5.data.js"></script>
+		<link rel="stylesheet" href="5.data.css">
+	<body>
+		<h1>Работа с датами</h1>
+		<form name="info">
+		<div>		
+			<fieldset>
+				<legend>Определить</legend>
+				<input type="radio" name="day" value="">Количество дней
+				<br><input type="radio" name="day" value="">Количество выходных
+				<br><input type="radio" name="day" value="">Количество рабочих дней
+				<br><input type="radio" name="day" value="">Количество полных недель
+				<br><input type="radio" name="day" value="">Количество полных месяцев
+			</fieldset>
+			<p>Результат<input id="res" type="text" name="res"></p>
+			<input type="button" value="Вычислить" onclick="prov()">
+		</div>
+		<div class="data">
+			<p>Начало периода:</p>
+			<input id="one" type="text" name="date1" >
+			<p>Конец периода:</p>
+			<input id="two" type="date" name="date2">
+		</div>		
+	</body>
+</html>

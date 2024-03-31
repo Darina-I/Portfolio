@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Художники</title>
+		<script src="6.js.js"></script>
+		<link rel="stylesheet" href="6.js.css">
+	</head>
+	<body>
+	<div class="fon">
+		<h2>Страничка по заказу</h2>
+		<form name="info">
+			<fieldset>
+				<legend>Параметры страницы</legend>
+				<p>Художник<select name="draw" id="draw"></p>
+					<option value="draw1.jpg">Пабло Пикассо</option>
+					<option value="draw2.jpg">Сальвадор Дали</option>
+					<option value="draw3.jpg">Клод Моне</option>
+					<option value="draw4.jpg">Жан Арп</option>
+				</select>
+				<p>Подпись<input type="text" id="text"></p>
+				<div class="draw">
+					<input type="radio" name="fon" value="fon1.jpg">fon1.jpg
+					<br><input type="radio" name="fon" value="fon2.jpg">fon2.jpg
+					<br><input type="radio" name="fon"value="fon3.jpg">fon3.jpg
+				</div>
+				<div class="text">
+					<input type="checkbox" id="italic">Курсив
+					<br><input type="checkbox" id="under">Подчеркивание
+					<br><input type="checkbox" id="bold">Жирный
+				</div>
+			</fieldset>
+			<input type="button" value="Показать" onClick="new_window()">
+			<input type="reset" value="Сброс">
+		</form>
+	</div></body>
+</html>
+			
+			
+	
