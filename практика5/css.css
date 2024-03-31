@@ -1,0 +1,150 @@
+/*меню*/
+.menu{
+	display: block;
+	z-index: 100;
+	position: fixed;
+	width: 300px;
+	height: 100%;
+	background-color:#1d282a;
+}
+img.logo{
+	margin: 20px;
+	width: 250px;
+}
+img.swi{/*три полосочки,появляются при уменьшении окна браузера*/ 
+	display: none;
+	width: 50px;
+	margin: auto;
+}
+/*спрайты*/
+div.social{
+	width: 100px;
+	margin: auto;
+	margin-top: 25px;
+}
+.twitter{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url(images/social.png) 0px 0px;
+	margin-left: 10px;
+}
+.google{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url(images/social.png) 30px 0px;
+	margin-left: 20px;
+}
+/*конец спрайтов*/
+.menu a{
+	text-decoration: none;	
+	color:white;
+	font-weight: bold;
+}
+.menu li:hover{
+	background-color: #0099CC;
+	display:block;
+}
+.menu li{
+	font-size: 20px;
+	font-family: Arial;
+	list-style-type:none;
+	vertical-align: middle;
+	padding-top: 7px;
+	padding-left: 50px;
+	height: 35px;
+}
+.menu ul{
+	margin-top: 40px;
+	padding: 0px;
+}
+/*конец меню*/
+div.osnova{
+	width: 83%;
+	float: right;
+	display: inline-block;
+}
+h1{
+	font-family: "Arial Narrow";
+	font-size: 50px;
+}
+.osnova p{
+	font-size: 22px;
+	font-family: Arial;
+	text-align: justify;
+	margin-right: 20px;
+}
+img.watch{
+	display: block;
+	width: 1100px;
+	margin: auto;
+}
+img.lara{
+	display: block;
+	width: 900px;
+	margin: auto;
+}
+h2{
+	font-size: 30px;
+	font-family: "Arial Narrow"
+}
+.osnova li{
+	font-size: 22px;
+	margin-left: 0px;
+	padding: 15px;/*отступы вокруг текста списка не считая фоновую картинку*/
+}
+.lin{/*зигзаг*/
+	width: 100%;
+}
+.lenta{/*два блока (текст и три ссылки) в одном*/
+	position: absolute;
+	left: 80px;
+}
+/*три ссылки внизу*/
+.vce{
+	position: relative;
+	left: 150px;
+	width: 1300px;
+	margin: auto;
+}
+.block{/*a+img+p*/
+	display: inline-block;
+	vertical-align: top;
+	width: 350px;
+	margin: 30px;
+	text-align: center;
+}
+.vce a{
+	color:#000066;
+	font-family: "Arial Narrow";
+	font-size: 30px;
+}
+.vce img{
+	width: 350px;
+}
+.vce p{
+	font-size: 22px;
+	font-family: Arial;
+	text-align: left;
+}
+@media screen and (max-width: 670px){
+	body{overflow-x: hidden;}/*прокрутка по оси х исчезает*/
+	h1{font-size: 24px;}
+	h2{font-size: 20px;}
+	.menu{width:60px;}
+	.lenta{position: static; left:0px;}/*позиции нету*/
+	.logo {display: none;}	
+	.menu li{display: none;}
+	.social{display: none;}
+	img.watch{width: 420px;}
+	img.lara{width:420px;}
+	.block{ display: block;}
+	img.swi{display: block;}
+	.osnova li{ font-size: 14px;}
+	.block img{width: 420px;}
+	.osnova p{font-size: 14px;}
+	.vce{position: relative; left: 70px;}
+	.vce p{width:400px; font-size: 12px;}
+	.vce a{ font-size: 20px;}	
+}
